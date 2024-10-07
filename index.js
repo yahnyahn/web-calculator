@@ -19,6 +19,10 @@ function appendToDisplay(input, isOperator=null){
 function calculate(){
     try{
         display.value = eval(display.value);
+
+        if (display.value === "Infinity"){
+            display.value = "Undefined";
+        }
         calculated = true;
     }
     catch(error){
